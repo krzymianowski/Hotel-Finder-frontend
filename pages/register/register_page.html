@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Hotel Finder</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/master.css">
+    <link rel="stylesheet" href="/pages/register/css/register-page.css">
+</head>
+
+<body>
+    <header>
+        <div id="current-user">
+            <span class="user-name ">user.user@gmail.com
+                <i class="fa fa-caret-down"></i>
+            </span>
+            <div class="user-menu">
+                <ul>
+                    <li>Profile</li>
+                    <li id="temporaryLoginButton">Logout</li>
+                </ul>
+            </div>
+        </div>
+        <div class="group">
+            <div class="text-group">
+                <div class="title">Hotel Finder</div>
+                <div class="version">version: 0.34</div>
+            </div>
+            <div class="menu-button">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-item">
+            <a href="/home-page.html">
+                <i class="fa fa-home"></i>
+                <span>Home page</span>
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/pages/search/search_page.html">
+                <i class="fa fa-search"></i>
+                <span>Search for hotels</span>
+            </a>
+        </div>
+        <div class="nav-item active">
+            <a href="/pages/register/register_page.html">
+                <i class="fa fa-user-plus"></i>
+                <span>Register</span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="header">
+            <h1>Register new account</h1>
+        </div>
+        <div class="main">
+            <div class="register-form">
+                <form action="">
+                    <fieldset>
+                        <div class="head">
+                            <div class="title">
+                                <legend>Register new account</legend>
+                            </div>
+                        </div>
+                        <div class="alerts">
+                            <div class="error">
+                                <span>Username cannot contain special characters.</span>
+                            </div>
+                            <div class="error">
+                                <span>Password to short</span>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="inputs">
+                                <div class="input">
+                                    <input type="text" placeholder="Name">
+                                    <div class="icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <input type="text" placeholder="Tel. number">
+                                    <div class="icon">
+                                        <i class="fa fa-phone-square"></i>
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <input type="text" placeholder="E-mail">
+                                    <div class="icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <input type="password" placeholder="Password">
+                                    <div class="icon">
+                                        <i class="fa fa-lock"></i>
+                                    </div>
+                                </div>
+                                <div class="input">
+                                    <input type="password" placeholder="Repeat password">
+                                    <div class="icon">
+                                        <i class="fa fa-lock" style="text-shadow: 16px 0px 0; left: calc(50% - 8px);"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <button class="button" type="submit">
+                                Register!
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="top-line-group">
+            <div class="center">
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/krzymianowski/">
+                        <i class="fa fa-linkedin-square"></i>
+                    </a>
+                    <a href="https://www.facebook.com">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="https://github.com/krzymianowski">
+                        <i class="fa fa-git-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-envelope-square"></i>
+                    </a>
+                </div>
+                <div class="small-nav">
+                    <a href="/home-page.html">Home page</a>
+                    <a href="/pages/search/search_page.html">Search for hotels</a>
+                    <a href="/pages/register/register_page.html">Register</a>
+                    <a href="/pages/about/about_page.html">About page</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>&copy; 2018 krzymianowski.com</span>
+        </div>
+    </footer>
+
+    <div class="login">
+            <div class="cover"></div>
+            <form action="">
+                <fieldset class="login-dialog">
+                    <div class="head">
+                        <div class="title">
+                            <legend>Sign in</legend>
+                        </div>
+                        <div class="exit">
+                            <i class="fa fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="alerts">
+                        <div class="error">
+                            <span>Nieprawidłowy adres e-mail lub hasło.</span>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="input">
+                            <input type="text" placeholder="e-mail">
+                            <div class="icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <span class="space"></span>
+                        <div class="input">
+                            <input type="password" placeholder="password">
+                            <div class="icon">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button class="button" type="submit">
+                            Sing in!
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/master.js"></script>
+</body>
+
+</html>

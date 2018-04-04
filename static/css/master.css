@@ -1,0 +1,640 @@
+:root {
+    --color_primary_1: #41AC66;
+    --color_primary_2: #4DBD74;
+    --color_primary_3: #3E9B5D;
+    --color_secondary_1: #FF6D00;
+    --color_secondary_2: #FF9100;
+    --color_secondary_3: #E25E00;
+    --color_gray_1: #F3F3F3;
+    --color_gray_2: #424242;
+    --color_gray_3: #E4E5E6;
+    --color_gray_4: #D1D4D7;
+    --color_gray_5: #DDD;
+    --color_gray_6: #AAA;
+    --color_gray_7: #232323;
+    --color_white: #FFFFFF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    --header_height: 85px;
+    --nav_height: 40px;
+    --footer_height: 300px;
+}
+
+body {
+    background-color: var(--color_gray_1);
+    overflow-x: hidden;
+}
+
+input {
+    font-family: 'Lato', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+    header 
+*/
+
+header {
+    position: relative;
+    overflow: visible;
+    height: var(--header_height);
+    color: var(--color_white);
+    background-color: var(--color_primary_3);
+}
+
+/* 
+    header || sing-in-button
+*/
+
+#sign-in-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    min-width: 180px;
+    text-align: right;
+    font-size: 1.5rem;
+    z-index: 3;
+}
+
+#sign-in-button>a {
+    text-decoration: none;
+    color: var(--color_white);
+}
+
+#sign-in-button:hover {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color4);
+    background-color: var(--color_primary_2);
+}
+
+#sign-in-button:active {
+    background-color: var(--color_gray_1);
+}
+
+#sign-in-button>a:hover {
+    color: var(--color4);
+}
+
+#sign-in-button>a:active {
+    color: var(--color_primary_1);
+}
+
+#sign-in-button>span {
+    position: relative;
+    padding: 0 40px 0 40px;
+    display: block;
+    line-height: 40px;
+    font-size: 1.5rem;
+}
+
+#sign-in-button>span>i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+}
+
+/* 
+    header || current-user-button
+*/
+
+#current-user {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    min-width: 180px;
+    text-align: right;
+    font-size: 1.5rem;
+    z-index: 3;
+}
+
+#current-user>.user-name {
+    position: relative;
+    display: block;
+    padding: 0 40px 0 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#current-user>.user-name[class*="active"] {
+    text-align: center;
+    font-weight: bold;
+    border-left: 8px solid var(--color_gray_1);
+    border-right: 8px solid var(--color_secondary_2);
+    background-color: var(--color_secondary_2);
+}
+
+#current-user>.user-name[class*="active"]:hover {
+    border-right: 8px solid var(--color_secondary_1);
+    background-color: var(--color_secondary_1);
+}
+
+#current-user>.user-name[class*="active"]:active {
+    border-right: 8px solid var(--color_secondary_2);
+    background-color: var(--color_secondary_2);
+}
+
+#current-user>.user-name>i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    right: 15px;
+}
+
+#current-user>.user-menu {
+    display: none;
+    position: relative;
+    color: var(--color_gray_2);
+    line-height: 45px;
+    text-align: center;
+    background-color: var(--color_gray_1);
+    font-weight: bold;
+    border-bottom: 1px solid var(--color_gray_3);
+    border-left: 1px solid var(--color_gray_3);
+    padding-top: 8px;
+}
+
+#current-user .user-menu li {
+    cursor: pointer;
+    user-select: none;
+}
+
+#current-user .user-menu li:hover {
+    background-color: var(--color_white);
+}
+
+#current-user .user-menu li:active {
+    background-color: var(--color_gray_1);
+}
+
+/* 
+    header || heading group
+*/
+
+header>.group {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+}
+
+header>.group>.text-group {
+    position: absolute;
+    width: 90%;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header>.group>.text-group>.title {
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+header>.group>.text-group>.version {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+header>.group>.menu-button {
+    display: none;
+    position: absolute;
+    font-size: 3rem;
+    text-align: center;
+    height: 100%;
+    width: 10%;
+}
+
+header>.group>.menu-button>i {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 
+    nav || menu
+*/
+
+nav {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+    color: var(--color_white);
+    background-color: var(--color_primary_2);
+    box-shadow: 1px 1px var(--color_primary_1);
+    text-align: center;
+}
+
+nav>.nav-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: var(--nav_height);
+    border-right: 1px solid var(--color_primary_1);
+    font-size: 1.6rem;
+}
+
+nav>.nav-item:last-child {
+    border-right: none;
+}
+
+nav>.nav-item[class*="active"] {
+    background-color: var(--color_secondary_2);
+}
+
+nav>.nav-item:hover {
+    background-color: var(--color_gray_1);
+}
+
+nav>.nav-item[class*="active"]:hover {
+    background-color: var(--color_secondary_1);
+}
+
+nav>.nav-item:active {
+    background-color: var(--color_primary_2);
+}
+
+nav>.nav-item[class*="active"]:active {
+    background-color: var(--color_secondary_2);
+}
+
+nav>.nav-item>a {
+    text-decoration: none;
+    color: var(--color_white);
+    height: var(--nav_height);
+    display: block;
+    padding: 0 40px;
+}
+
+nav>.nav-item>a:hover {
+    color: var(--color_gray_2);
+}
+
+nav>.nav-item[class*="active"]>a:hover {
+    color: var(--color_white);
+}
+
+nav>.nav-item>a:active {
+    color: var(--color_white);
+}
+
+nav>.nav-item>a>i {
+    position: relative;
+    left: -10px;
+}
+
+nav>.nav-item>a>span {
+    position: relative;
+    line-height: var(--nav_height);
+}
+
+/* 
+    main
+*/
+
+main {
+    --main_header_height: 100px;
+    --main_footer_height: 80px;
+    position: relative;
+    min-height: calc(100vh - var(--footer_height) - var(--header_height) - var(--nav_height));
+    background-color: var(--color_gray_3);
+}
+
+/* 
+    main || .header
+*/
+
+main>.header {
+    position: relative;
+    height: var(--main_header_height);
+    background-color: var(--color_white);
+    border-bottom: 1px solid var(--color_gray_4);
+    box-shadow: 0 4px 10px var(--color_gray_5);
+    z-index: 1;
+    width: 100%;
+}
+
+/* 
+    main || .main
+*/
+
+main>.main {
+    position: relative;
+    width: 100%;
+    padding-bottom: var(--main_footer_height);
+    /* if main .footer position relative */
+    /* min-height: calc(100vh - var(--footer_height) - var(--header_height) - var(--nav_height) - var(--main_header_height) - var(--main_footer_height)); */
+}
+
+/* 
+    main || .footer
+*/
+
+main>.footer {
+    position: absolute;
+    bottom: 0;
+    height: var(--main_footer_height);
+    width: 100%;
+    background-color: var(--color_white);
+    border-top: 1px solid var(--color_gray_4);
+    box-shadow: 0 -4px 10px var(--color_gray_5);
+}
+
+/* 
+    footer
+*/
+
+#footerLoginBtn{
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+    height: var(--footer_height);
+    color: var(--color_white);
+    background-color: var(--color_gray_2);
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer>.top-line-group {
+    height: 250px;
+}
+
+footer>.top-line-group>.center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer>.top-line-group .icons {
+    font-size: 6.3rem;
+    height: 80px;
+}
+
+footer>.top-line-group .icons i {
+    width: 80px;
+    color: var(--color_white);
+    transition: font-size 0.3s;
+}
+
+footer>.top-line-group .icons i:hover {
+    font-size: 6.8rem;
+}
+
+footer>.top-line-group .small-nav {
+    font-size: 0;
+    margin: 8px 0 0 0;
+}
+
+footer>.top-line-group .small-nav>a {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 0 20px;
+    border-right: 1px solid var(--color_white);
+}
+
+footer>.top-line-group .small-nav>a:last-child {
+    border-right: none;
+}
+
+footer>.copyright {
+    height: 50px;
+    background-color: var(--color_primary_1);
+    font-size: 1.6rem;
+}
+
+footer>.copyright>span {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 
+    Login dialog
+*/
+
+body>.login fieldset {
+    border: none;
+}
+
+body>.login button {
+    border: none;
+}
+
+body>.login {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+}
+
+body>.login>.cover {
+    background-color: var(--color_gray_2);
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+body>.login .login-dialog {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background-color: var(--color_white);
+    overflow: hidden;
+    box-shadow: 0 0 20px 3px var(--color_gray_2);
+}
+
+body>.login .login-dialog>.head {
+    position: relative;
+    background-color: var(--color_primary_1);
+    height: 55px;
+}
+
+body>.login .login-dialog>.head>.title {
+    position: relative;
+    font-size: 1.8rem;
+    color: white;
+    height: 100%;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+body>.login .login-dialog>.head>.title>legend {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body>.login .login-dialog>.head>.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 55px;
+    font-size: 2.0rem;
+    color: white;
+    opacity: 0.3;
+}
+
+body>.login .login-dialog>.head>.exit:hover {
+    opacity: 1;
+}
+
+body>.login .login-dialog>.head>.exit:active {
+    background-color: var(--color_gray_1);
+    color: var(--color_gray_2);
+}
+
+body>.login .login-dialog>.head>.exit>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body>.login .login-dialog>.alerts {
+    position: relative;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--color_gray_2);
+}
+
+body>.login .login-dialog>.alerts>div {
+    position: relative;
+    height: 40px;
+    background-color: var(--color_gray_3);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+body>.login .login-dialog>.alerts>div[class*="error"] {
+    background-color: rgb(255, 182, 164);
+}
+
+body>.login .login-dialog>.alerts>div>span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+body>.login .login-dialog>.body {
+    position: relative;
+    font-size: 1.6rem;
+    padding: 25px 40px 45px 40px;
+}
+
+body>.login .login-dialog>.body .space {
+    display: block;
+    padding-bottom: 10px;
+}
+
+body>.login .login-dialog>.body>.input {
+    position: relative;
+    width: 100%;
+}
+
+body>.login .login-dialog>.body>.input>input {
+    position: relative;
+    padding: 0 95px 0 10px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 0 1px var(--color_gray_5);
+    border-radius: 5px;
+    background-color: var(--color_gray_1);
+}
+
+body>.login .login-dialog>.body>.input>input:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px var(--color_primary_1);
+}
+
+body>.login .login-dialog>.body>.input:hover .icon {
+    background-color: var(--color_gray_1);
+    color: var(--color_gray_2);
+}
+
+body>.login .login-dialog>.body>.input>.icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--color_primary_2);
+    color: white;
+    height: 40px;
+    width: 85px;
+    box-shadow: 0 0 0 1px var(--color_primary_2);
+    border-radius: 0 5px 5px 0;
+    font-size: 2.2rem;
+}
+
+body>.login .login-dialog>.body>.input>.icon>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body>.login .login-dialog>.footer {
+    position: relative;
+    widows: 100%;
+    height: 100px;
+    border-top: 1px solid var(--color_gray_4);
+    background-color: var(--color_gray_1);
+    color: var(--color_gray_2);
+}
+
+body>.login .login-dialog>.footer>.button {
+    background-color: inherit;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    font-size: 2.4rem;
+    border: none;
+}
+
+body>.login .login-dialog>.footer>.button:hover {
+    background-color: var(--color_primary_1);
+    color: var(--color_gray_2);
+    color: white;
+}
+
+body>.login .login-dialog>.footer>.button:active {
+    color: var(--color_gray_2);
+    background-color: var(--color_gray_1);
+    border: none;
+    outline: none;
+}
