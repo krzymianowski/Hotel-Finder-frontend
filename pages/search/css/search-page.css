@@ -3,7 +3,7 @@
 */
 
 main {
-    --main_header_height: 136px;
+    --main_header_height: 250px;
 }
 
 main>.cover {
@@ -25,12 +25,12 @@ main>.footer {
 */
 
 main>.header {
-    padding-top: 40px;
+    padding-top: 10px;
     z-index: 2;
 }
 
 main>.header>.search-menu {
-    height: 95px;
+    height: auto;
 }
 
 main>.header>.search-menu>ul {
@@ -39,21 +39,23 @@ main>.header>.search-menu>ul {
     transform: translateX(-50%);
     text-align: center;
     height: 100%;
-    width: 1200px;
+    width: 310px;
     text-transform: uppercase;
 }
 
 main>.header>.search-menu>ul>li {
     position: relative;
     float: left;
-    width: calc(100% / 5);
-    height: 100%;
-    font-size: 1.5rem;
+    width: 50%;
+    height: 55px;
+    font-size: 1.2rem;
 }
 
 main>.header>.search-menu>ul>li[class*="search-stats"] {
     background-color: var(--color_secondary_2);
     color: var(--color_white);
+    width: 100%;
+    height: 110px;
 }
 
 main>.header>.search-menu>ul>li[class*="search-stats"]>.header {
@@ -94,19 +96,13 @@ main>.header>.search-menu>ul>li>.menu-holder>.menu-button {
     background-color: var(--color_gray_1);
     color: var(--color_gray_2);
     font-weight: bold;
-    border-bottom: 1px solid var(--color_gray_3);
-    border-top: 1px solid var(--color_gray_3);
-    border-left: 1px solid var(--color_gray_3);
+    border: 1px solid var(--color_gray_3);
     user-select: none;
     cursor: pointer;
 }
 
 main>.header>.search-menu>ul>li>.menu-holder>.menu-button:active {
     background-color: var(--color_gray_1);
-}
-
-main>.header>.search-menu>ul>li:last-child>.menu-holder>.menu-button {
-    border-right: 1px solid var(--color_gray_3);
 }
 
 main>.header>.search-menu>ul>li>.menu-holder>.menu-button>.text {
@@ -154,7 +150,6 @@ main>.header>.search-menu>ul>li>.menu-holder>.menu {
     left: 0;
     max-height: 300px;
     width: 100%;
-    z-index: 2;
     background-color: var(--color_white);
     border-left: 1px solid var(--color_gray_3);
     border-bottom: 1px solid var(--color_gray_3);
@@ -164,11 +159,11 @@ main>.header>.search-menu>ul>li>.menu-holder>.menu {
     padding: 20px 0;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: -1;
 }
 
 main>.header>.search-menu>ul>li>.menu-holder>.menu li {
     position: relative;
-    /*    background-color: aqua;*/
     height: 40px;
     line-height: 40px;
     list-style: none;
@@ -208,25 +203,28 @@ main>.header>.search-menu>ul>li>.menu-holder>.menu li>span {
 main>.main>.hotels-list>ul {
     text-align: center;
     font-size: 0;
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 main>.main>.hotels-list>ul>li {
     position: relative;
     font-size: 2rem;
     display: inline-block;
-    width: 1070px;
-    height: 165px;
+    width: 300px;
+    height: auto;
     overflow: hidden;
     box-shadow: 4px 4px 10px var(--color_gray_5);
+    margin-bottom: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
 main>.main>.hotels-list>ul>li>.header {
-    position: absolute;
-    width: 20%;
-    height: 100%;
-    background-color: var(--color_primary_2);
     color: var(--color_white);
+    background-color: var(--color_primary_2);
+    position: relative;
+    width: 100%;
+    height: 150px;
 }
 
 main>.main>.hotels-list>ul>li:nth-child(2n)>.header {
@@ -299,38 +297,39 @@ main>.main>.hotels-list>ul>li>.header>.content>.stars .fa-star {
 }
 
 main>.main>.hotels-list>ul>li>.main {
-    position: absolute;
-    left: 20%;
-    top: 0;
-    width: 80%;
-    height: 100%;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
     font-size: 1.5rem;
-    border: 1px solid #D1D4D7;
 }
 
 main>.main>.hotels-list>ul>li>.main>ul {
     height: 100%;
+    width: 100%;
+    border: 1px solid var(--color_gray_4);
     background-color: var(--color_white)
 }
 
 main>.main>.hotels-list>ul>li>.main>ul>li {
-    float: left;
-    height: 100%;
-    width: calc(100% / 4);
+    position: relative;
+    float: none;
+    height: 150px;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 15px;
     overflow: hidden;
 }
 
 main>.main>.hotels-list>ul>li>.main>ul>li:nth-child(2n+1) {
-    background-color: var(--color_gray_1)
+    background-color: var(--color_gray_1);
 }
 
 main>.main>.hotels-list>ul>li>.main>ul>li>div {
     position: relative;
     text-align: left;
     height: 50%;
-    padding: 0 10px 0 25px;
+    padding: 0 25px 0 30px;
 }
 
 main>.main>.hotels-list>ul>li>.main>ul>li>div .attr {
@@ -359,21 +358,22 @@ main>.main>.hotels-list>ul>li>.main>ul>li>div .attr span {
 */
 
 main>.footer {
-    font-size: 1.5rem;
     text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 main>.footer>.hotels-paginator {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 40px;
-    width: auto;
+    height: 50px;
+    width: 310px;
     border-radius: 0 0 10px 10px;
     border-bottom: 1px solid var(--color_gray_5);
     border-left: 1px solid var(--color_gray_5);
     border-right: 1px solid var(--color_gray_5);
     overflow: hidden;
+    text-align: center;
     cursor: pointer;
     user-select: none;
 }
@@ -383,8 +383,18 @@ main>.footer>.hotels-paginator>div {
     float: left;
     background-color: var(--color_gray_1);
     height: 100%;
-    padding: 0 15px;
+    width: 10%;
     border-right: 1px solid var(--color_gray_5);
+    overflow: hidden;
+}
+
+main>.footer>.hotels-paginator>div:last-child {
+    border-right: none;
+    width: 15%;
+}
+
+main>.footer>.hotels-paginator>div:first-child {
+    width: 25%;
 }
 
 main>.footer>.hotels-paginator>div:hover {
@@ -395,13 +405,240 @@ main>.footer>.hotels-paginator>div:active {
     background-color: var(--color_gray_1);
 }
 
-main>.footer>.hotels-paginator>div:last-child {
-    border-right: none;
-}
-
 main>.footer>.hotels-paginator>div>span {
     position: relative;
     display: block;
     top: 50%;
     transform: translateY(-50%);
 }
+
+@media (min-width: 360px) {
+    main>.header>.search-menu>ul {
+        width: 330px;
+    }
+    main>.main>.hotels-list>ul>li {
+        width: 330px;
+    }
+    main>.footer>.hotels-paginator {
+        width: 330px;
+    }
+}
+
+@media (min-width: 560px) {
+    main>.header>.search-menu>ul {
+        width: 430px;
+    }
+    main>.main>.hotels-list>ul>li {
+        width: 430px;
+    }
+    main>.footer>.hotels-paginator {
+        width: 430px;
+    }
+    main>.header>.search-menu>ul>li {
+        font-size: 1.4rem;
+    }
+    main>.footer {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+@media (min-width: 645px) {
+    main {
+        --main_header_height: 150px;
+    }
+
+    main>.header {
+        padding-top: 30px;
+    }
+    
+    main>.header>.search-menu {
+        height: 110px;
+    }
+    
+    main>.header>.search-menu>ul {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        height: 110px;
+        width: 600px;
+        text-transform: uppercase;
+    }
+    
+    main>.header>.search-menu>ul>li {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
+    
+    main>.header>.search-menu>ul>li[class*="search-stats"] {
+        background-color: var(--color_secondary_2);
+        color: var(--color_white);
+        width: 200px;
+        height: 100%;
+    }
+
+    main>.footer>.hotels-paginator {
+        height: 40px;
+    }
+
+}
+
+@media (min-width: 710px) {
+    main>.main>.hotels-list>ul>li {
+        width: 330px;
+    }
+}
+
+
+@media (min-width: 1210px) {
+    main>.header {
+        padding-top: 40px;
+    }
+    main>.header>.search-menu {
+        height: 95px;
+    }
+    main>.header>.search-menu>ul {
+        width: 1200px;
+    }
+    main>.header>.search-menu>ul>li {
+        width: calc(100% / 5);
+        height: 100%;
+        font-size: 1.5rem;
+    }
+    main>.header>.search-menu>ul>li[class*="search-stats"] {
+        width: calc(100% / 5);
+        height: 100%;
+    }
+    main>.header>.search-menu>ul>li>.menu-holder>.menu-button {
+        border-bottom: 1px solid var(--color_gray_3);
+        border-top: 1px solid var(--color_gray_3);
+        border-left: 1px solid var(--color_gray_3);
+        border-right: none;
+    }
+    main>.header>.search-menu>ul>li:last-child>.menu-holder>.menu-button {
+        border-right: 1px solid var(--color_gray_3);
+    }
+    main>.main>.hotels-list>ul {
+        padding: 50px 0;
+    }
+    main>.main>.hotels-list>ul>li {
+        width: 1070px;
+        height: 165px;
+        margin: 0;
+    }
+    main>.main>.hotels-list>ul>li>.header {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+    }
+    main>.main>.hotels-list>ul>li>.main {
+        left: 20%;
+        top: 0;
+        width: 80%;
+        height: 100%;
+    }
+    main>.main>.hotels-list>ul>li>.main>ul {
+        position: relative;
+        height: 100%;
+    }
+    main>.main>.hotels-list>ul>li>.main>ul>li {
+        float: left;
+        height: 100%;
+        width: calc(100% / 4);
+    }
+    main>.main>.hotels-list>ul>li>.main>ul>li>div {
+        padding: 0 10px 0 25px;
+    }
+    main>.footer {
+        /* font-size: 1.5rem; */
+    }
+    main>.footer>.hotels-paginator {
+        height: 40px;
+        width: auto;
+    }
+    main>.footer>.hotels-paginator>div {
+        width: auto;
+        padding: 0 15px;
+    }
+    main>.footer>.hotels-paginator>div:last-child {
+        width: auto;
+    }
+    main>.footer>.hotels-paginator>div:first-child {
+        width: auto;
+    }
+}
+
+/* 
+@media (max-width: 700px) {
+    main {
+        --main_header_height: 250px;
+    }
+    main>.header {
+        padding-top: 10px;
+        z-index: 2;
+    }
+    main>.header>.search-menu {
+        height: auto;
+    }
+    main>.header>.search-menu>ul {
+        width: 310px;
+    }
+    main>.header>.search-menu>ul>li {
+        position: relative;
+        width: 50%;
+        height: 55px;
+        font-size: 1.2rem;
+        background-color: greenyellow;
+    }
+    main>.header>.search-menu>ul>li[class*="search-stats"] {
+        width: 100%;
+        height: 110px;
+    }
+    main>.header>.search-menu>ul>li>.menu-holder>.menu-button {
+        border: 1px solid var(--color_gray_3);
+    }
+    main>.header>.search-menu>ul>li>.menu-holder>.menu {
+        z-index: -1;
+    }
+    main>.main>.hotels-list>ul {
+        padding: 25px 0;
+    }
+    main>.main>.hotels-list>ul>li {
+        font-size: 2rem;
+        width: 300px;
+        height: auto;
+        margin-bottom: 16px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    main>.main>.hotels-list>ul>li>.header {
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+    main>.main>.hotels-list>ul>li>.main {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: auto;
+        font-size: 1.5rem;
+    }
+    main>.main>.hotels-list>ul>li>.main>ul {
+        height: 100%;
+        width: 100%;
+        border: 1px solid #D1D4D7;
+    }
+    main>.main>.hotels-list>ul>li>.main>ul>li {
+        float: none;
+        height: 150px;
+        width: 100%;
+    }
+    main>.main>.hotels-list>ul>li>.main>ul>li>div {
+        padding: 0 25px 0 30px;
+    }
+} */

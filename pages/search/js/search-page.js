@@ -3,6 +3,12 @@ $(document).ready(function () {
     var $searchMenuHolder = $("main>.header>.search-menu>ul>li>.menu-holder");
     var $searchMenuButton = $searchMenuHolder.children(".menu-button");
 
+    $searchMenuHolder.each(function (index) {
+        console.log(index);
+        $(this).parent().css("z-index", -index);
+    })
+
+
     $(document).click(function (event) {
         // let $icon = $("#current-user>#user-name i");
 
@@ -12,21 +18,24 @@ $(document).ready(function () {
                     let $icon = $(this).parent().find(".menu-button i");
 
                     $(this).fadeOut(100, function () {
-                        $icon.toggleClass("fa-caret-down");
-                        $icon.toggleClass("fa-caret-up");
+                        $icon.addClass("fa-caret-down");
+                        $icon.removeClass("fa-caret-up");
                     })
                     coverFadeOut();
                 }
             });
-
-            // if ($searchMenuHolder.children(".menu").is(":visible")) {
-            //     $searchMenuHolder.children(".menu").fadeOut(100, function (event) {
-            //         $searchMenuButton.find("i").toggleClass("fa-caret-down");
-            //         $searchMenuButton.find("i").toggleClass("fa-caret-up");
-            //         // $('#current-user>.user-name').toggleClass("active");
-            //     });
-            // }
         }
+
+        $("main>.header>.search-menu>ul>li>.menu-holder").each(function () {
+            console.log($(this));
+            if (!$(event.target).closest($(this)).length) {
+                console.log("to");
+                    $(this).children(".menu").fadeOut();
+                    $(this).find(".icon i").addClass("fa-caret-down");
+                    $(this).find(".icon i").removeClass("fa-caret-up");
+            }
+        })
+
     })
 
     $searchMenuButton.click(function () {
@@ -34,9 +43,9 @@ $(document).ready(function () {
         let $searchMenuItemMenu = $(this).parent().children(".menu");
         let $icon = $(this).find("i");
         if ($searchMenuItemMenu.is(":visible")) {
-            $searchMenuItemMenu.fadeToggle(100, function(){
-                $icon.toggleClass("fa-caret-down");
-                $icon.toggleClass("fa-caret-up");
+            $searchMenuItemMenu.fadeToggle(100, function () {
+                $icon.addClass("fa-caret-down");
+                $icon.removeClass("fa-caret-up");
 
                 let hide = true;
                 $("main>.header>.search-menu>ul>li>.menu-holder>.menu").each(function () {
@@ -44,27 +53,27 @@ $(document).ready(function () {
                         hide = false;
                     }
                 })
-                if(hide) coverFadeOut();
+                if (hide) coverFadeOut();
             })
         } else {
             coverFadeIn();
             $searchMenuItemMenu.fadeToggle(250);
-            $icon.toggleClass("fa-caret-down");
-            $icon.toggleClass("fa-caret-up");
+            $icon.removeClass("fa-caret-down");
+            $icon.addClass("fa-caret-up");
         }
 
     })
 
     function coverFadeIn() {
 
-        $("main>.header").css("box-shadow","none");
-        $("main>.footer").css("box-shadow","none");
+        $("main>.header").css("box-shadow", "none");
+        $("main>.footer").css("box-shadow", "none");
         $("main>.cover").fadeIn();
     }
     function coverFadeOut() {
-        $("main>.cover").fadeOut("fast", function(){
-            $("main>.header").css("box-shadow","0 4px 10px var(--color_gray_5)");
-            $("main>.footer").css("box-shadow","0 -4px 10px var(--color_gray_5)");
+        $("main>.cover").fadeOut("fast", function () {
+            $("main>.header").css("box-shadow", "0 4px 10px var(--color_gray_5)");
+            $("main>.footer").css("box-shadow", "0 -4px 10px var(--color_gray_5)");
         });
     }
 })

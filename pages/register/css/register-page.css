@@ -24,7 +24,6 @@ main>.header>h1 {
     main || .main
 */
 
-
 main>.main>.register-form {
     position: relative;
     left: 50%;
@@ -77,7 +76,7 @@ main>.main>.register-form .alerts {
     color: var(--color_gray_2);
 }
 
-main>.main>.register-form .alerts>div{
+main>.main>.register-form .alerts>div {
     position: relative;
     height: 40px;
     background-color: rgb(255, 182, 164);
@@ -85,6 +84,7 @@ main>.main>.register-form .alerts>div{
     border-radius: 5px;
     padding: 0 20px;
 }
+
 main>.main>.register-form .alerts>div>span {
     position: relative;
     top: 50%;
@@ -119,10 +119,12 @@ main>.main>.register-form .body>.inputs>.input>input {
     border-radius: 5px;
     background-color: var(--color_gray_1);
 }
+
 main>.main>.register-form .body>.inputs>.input>input:focus {
     outline: none;
     box-shadow: 0 0 1px 1px var(--color_primary_1);
 }
+
 main>.main>.register-form .body>.inputs>.input:hover .icon {
     background-color: var(--color_gray_1);
     color: var(--color_gray_2);
@@ -177,4 +179,41 @@ main>.main>.register-form .footer>.button:active {
     background-color: var(--color_gray_1);
     border: none;
     outline: none;
+}
+
+@media (max-width: 700px) {
+    main {
+        --main_header_height: 80px;
+        --main_footer_height: 40px;
+    }
+
+    main>.header {
+        font-size: 1.1rem;
+    }
+
+    main>.main>.register-form {
+        width: 300px;
+        margin: 20px 0 40px 0;
+    }
+
+    main>.main>.register-form .body {
+        padding: 0 20px;
+    }
+
+    main>.main>.register-form .body>.inputs {
+        padding: 5px 0 45px 0;
+    }
+
+    main>.main>.register-form .body>.inputs>.input>input {
+        padding: 0 70px 0 10px;
+    }
+
+    main>.main>.register-form .body>.inputs .icon {
+        width: 60px;
+        font-size: 1.8rem;
+    }
+
+    main>.main>.register-form .footer {
+        height: 80px;
+    }
 }
