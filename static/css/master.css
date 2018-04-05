@@ -52,6 +52,7 @@ header {
     height: var(--header_height);
     color: var(--color_white);
     background-color: var(--color_primary_3);
+    z-index: 2;
 }
 
 /* 
@@ -240,7 +241,6 @@ nav {
     font-size: 0;
     color: var(--color_white);
     background-color: var(--color_primary_2);
-    box-shadow: 1px 1px var(--color_primary_1);
     text-align: center;
 }
 
@@ -660,14 +660,15 @@ body>.login .login-dialog>.footer>.button:active {
     nav {
         display: none;
         position: absolute;
+        top: calc(var(--header_height) - 0px);
         width: 100%;
         max-width: 320px;
         z-index: 3;
         background-color: var(--color_gray_1);
-        /* border-left: 5px solid var(--color_primary_3); */
-        border-right: 2px solid var(--color_primary_3);
-        border-bottom: 2px solid var(--color_primary_3);
-        box-shadow: 1px 1px 5px var(--color_primary_3);
+        border-left: 20px solid var(--color_primary_3);
+        border-right: 1px solid var(--color_primary_3);
+        border-bottom: 1px solid var(--color_primary_3);
+        box-shadow: none;
     }
     nav>.nav-item {
         display: block;
