@@ -4,14 +4,11 @@ $(document).ready(function () {
     var $searchMenuButton = $searchMenuHolder.children(".menu-button");
 
     $searchMenuHolder.each(function (index) {
-        console.log(index);
         $(this).parent().css("z-index", -index);
     })
 
 
     $(document).click(function (event) {
-        // let $icon = $("#current-user>#user-name i");
-
         if (!$(event.target).closest($searchMenuHolder).length) {
             $searchMenuHolder.children(".menu").each(function () {
                 if ($(this).is(":visible")) {
@@ -27,9 +24,7 @@ $(document).ready(function () {
         }
 
         $("main>.header>.search-menu>ul>li>.menu-holder").each(function () {
-            console.log($(this));
             if (!$(event.target).closest($(this)).length) {
-                console.log("to");
                     $(this).children(".menu").fadeOut();
                     $(this).find(".icon i").addClass("fa-caret-down");
                     $(this).find(".icon i").removeClass("fa-caret-up");
