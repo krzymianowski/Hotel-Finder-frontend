@@ -52,7 +52,7 @@ header {
     height: var(--header_height);
     color: var(--color_white);
     background-color: var(--color_primary_3);
-    z-index: 2;
+    z-index: 4;
 }
 
 /* 
