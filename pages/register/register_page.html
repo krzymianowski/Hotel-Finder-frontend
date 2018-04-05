@@ -72,10 +72,10 @@
                         </div>
                         <div class="alerts">
                             <div class="error">
-                                <span>Username cannot contain special characters.</span>
+                                <span>Username should not contain special characters.</span>
                             </div>
                             <div class="error">
-                                <span>Password to short</span>
+                                <span>Password too short.</span>
                             </div>
                         </div>
                         <div class="body">
@@ -147,7 +147,8 @@
                     <a href="../../home-page.html">Home page</a>
                     <a href="../search/search_page.html">Search for hotels</a>
                     <a href="./register_page.html">Register</a>
-                    <a id="footerLoginBtn">Log in</a>                </div>
+                    <a id="footerLoginBtn">Log in</a>
+                </div>
             </div>
         </div>
         <div class="copyright">
@@ -156,46 +157,46 @@
     </footer>
 
     <div class="login">
-            <div class="cover"></div>
-            <form action="">
-                <fieldset class="login-dialog">
-                    <div class="head">
-                        <div class="title">
-                            <legend>Sign in</legend>
-                        </div>
-                        <div class="exit">
-                            <i class="fa fa-times"></i>
+        <div class="cover"></div>
+        <form action="">
+            <fieldset class="login-dialog">
+                <div class="head">
+                    <div class="title">
+                        <legend>Sign in</legend>
+                    </div>
+                    <div class="exit">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+                <div class="alerts">
+                    <div class="logout">
+                        <span>Successfully logged out.</span>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="input">
+                        <input type="text" placeholder="e-mail">
+                        <div class="icon">
+                            <i class="fa fa-user"></i>
                         </div>
                     </div>
-                    <div class="alerts">
-                        <div class="error">
-                            <span>Nieprawidłowy adres e-mail lub hasło.</span>
+                    <span class="space"></span>
+                    <div class="input">
+                        <input type="password" placeholder="password">
+                        <div class="icon">
+                            <i class="fa fa-lock"></i>
                         </div>
                     </div>
-                    <div class="body">
-                        <div class="input">
-                            <input type="text" placeholder="e-mail">
-                            <div class="icon">
-                                <i class="fa fa-user"></i>
-                            </div>
-                        </div>
-                        <span class="space"></span>
-                        <div class="input">
-                            <input type="password" placeholder="password">
-                            <div class="icon">
-                                <i class="fa fa-lock"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <button class="button" type="submit">
-                            Sing in!
-                        </button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    
+                </div>
+                <div class="footer">
+                    <button class="button" type="submit">
+                        Sing in!
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
     <script src="../../static/js/jquery-3.3.1.min.js"></script>
     <script src="../../static/js/master.js"></script>
 </body>
