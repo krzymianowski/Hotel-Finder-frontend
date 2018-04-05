@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
 
         if (!$(event.target).closest('nav').length && !$(event.target).closest('header>.group>.menu-button').length) {
-            if ($('nav').is(":visible") && $(window).width() <= mobileIn) {
+            if ($('nav').is(":visible") && window.innerWidth <= mobileIn) {
                 $("nav").slideToggle("fast");
             }
         }
