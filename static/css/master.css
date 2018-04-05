@@ -466,7 +466,7 @@ body>.login>.cover {
 
 body>.login .login-dialog {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     width: 400px;
     transform: translate(-50%, -50%);
