@@ -529,7 +529,8 @@ main>.footer>.hotels-paginator>div>span {
     main>.main>.hotels-list>ul>li {
         width: 1070px;
         height: 165px;
-        margin: 0;
+        margin-bottom:  -1px;
+        box-shadow: none;
     }
     main>.main>.hotels-list>ul>li>.header {
         position: absolute;
@@ -540,7 +541,8 @@ main>.footer>.hotels-paginator>div>span {
         left: 20%;
         top: 0;
         width: 80%;
-        height: 100%;
+        height: 95%;
+        box-shadow: 4px 4px 10px var(--color_gray_5);
     }
     main>.main>.hotels-list>ul>li>.main>ul {
         position: relative;
